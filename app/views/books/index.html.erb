@@ -1,0 +1,10 @@
+<h1>  Tall Boys Books</h1>
+<h3> Tall tales for tall people</h3>
+
+<p>Here are your books</p>
+<ul>
+
+<% @books.each do |book| %>
+<li class="book"><span class="title"><%= book.title %>: </span><span class="author"><%= book.author %>
+</ul>
+<% end %>
