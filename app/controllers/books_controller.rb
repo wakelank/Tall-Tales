@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   def index
+    @books = Book.all 
   end
 
   def new
@@ -9,6 +10,8 @@ class BooksController < ApplicationController
   end
 
   def create
+    book = Book.create(book_params)
+    redirect_to book_path(book)
   end
 
   def edit
@@ -20,4 +23,9 @@ class BooksController < ApplicationController
   def destroy
   end
 
+end
+
+private
+def book_params
+  book_params = params.require(:movie).permit(:title, :tagline)
 end
