@@ -1,1 +1,1 @@
-git test wake
+Add, edit, and delete new book titles and authors from your collection.
