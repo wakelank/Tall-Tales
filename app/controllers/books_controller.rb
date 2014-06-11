@@ -7,7 +7,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = book.find(params[:id]
+    @book = Book.find(params[:id])
   end
 
   def create
@@ -29,13 +29,10 @@ class BooksController < ApplicationController
   end
 
 
-private
+  private
 
-def book_params
-  params.require(:book).permit(:title, :author)
+  def book_params
+    params.require(:book).permit(:title, :author)
+  end
 end
 
-private
-def book_params
-  book_params = params.require(:movie).permit(:title, :tagline)
-end
