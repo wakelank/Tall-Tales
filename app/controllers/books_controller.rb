@@ -23,12 +23,12 @@ class BooksController < ApplicationController
   def update
     edit_book = Book.find(params[:id])
     edit_book.update(book_params)
-    redirect_to "/books/#{book.id}"
+    redirect_to "/books/#{edit_book.id}"
   end
 
   def destroy
     Book.delete(params[:id])
-    redirect_to "/books/#{book.id}"
+    redirect_to "/books/#{edit_book.id}"
   end
 
 
