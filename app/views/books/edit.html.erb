@@ -1,8 +1,10 @@
 <h2>Edit Book</h2>
 
-<form action="books/<%= @book.id %>" method="post">
+<%=render 'form'%> 
+
+<!-- <form action="books/<%= @book.id %>" method="post">
   <input type="hidden" name="_method" value="put">
   <% token_tag %>
 <input type="text" name="book[name]" value="<%= @book.name %>">
 <input type="submit">
-</form>
+</form> -->
